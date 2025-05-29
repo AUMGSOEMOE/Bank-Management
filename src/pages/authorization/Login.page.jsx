@@ -1,7 +1,11 @@
 import React from "react";
 import { Container } from "../../components";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
+  const handleBtn = () => {
+    console.log("ok");
+  };
   return (
     <Container>
       <div className=" mx-auto w-[50%]  flex justify-center items-center h-full ">
@@ -12,14 +16,13 @@ const LoginPage = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
                 height="45"
-                className="text-mask"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2.5714285714285716"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-venetian-mask-icon lucide-venetian-mask"
+                className="text-mask lucide lucide-venetian-mask-icon lucide-venetian-mask"
               >
                 <path d="M18 11c-1.5 0-2.5.5-3 2" />
                 <path d="M4 6a2 2 0 0 0-2 2v4a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V8a2 2 0 0 0-2-2h-3a8 8 0 0 0-5 2 8 8 0 0 0-5-2z" />
@@ -61,9 +64,14 @@ const LoginPage = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className=" border shadow-2xl font-bold flex items-center py-1 bg-white text-main  rounded-full px-4   ">
-              Log-In
-            </button>
+            <Link to={""}>
+              <button
+                onClick={handleBtn}
+                className=" border shadow-2xl font-bold flex items-center py-1 bg-white text-main  rounded-full px-4   "
+              >
+                Log-In
+              </button>
+            </Link>
           </div>
         </div>
       </div>
