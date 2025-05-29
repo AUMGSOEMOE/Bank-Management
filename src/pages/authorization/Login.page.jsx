@@ -64,7 +64,7 @@ const LoginPage = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <Link to={""}>
+            <Link to={"/dashboard"}>
               <button
                 onClick={handleBtn}
                 className=" border shadow-2xl font-bold flex items-center py-1 bg-white text-main  rounded-full px-4   "
