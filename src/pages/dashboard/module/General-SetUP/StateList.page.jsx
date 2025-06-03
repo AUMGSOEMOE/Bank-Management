@@ -1,7 +1,12 @@
 import React from "react";
+import { StateTable } from "../../../../components";
 
 const StateListPage = () => {
-  return <div>StateListPage</div>;
+  return (
+    <div>
+      <StateTable />
+    </div>
+  );
 };
 
 export default StateListPage;

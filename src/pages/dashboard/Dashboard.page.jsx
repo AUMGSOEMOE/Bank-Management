@@ -6,11 +6,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { AdminBar } from "../../components";
 
 const DashboardPage = () => {
   return (
     <div className="grid grid-cols-12 h-screen">
-      <div className=" bg-mask flex flex-col col-span-2 ">
+      <div className=" bg-mask flex flex-col sticky col-span-2 ">
         <div className="flex justify-center gap-1 ">
           <div className=" flex items-center ">
             <svg
@@ -151,8 +152,15 @@ const DashboardPage = () => {
           </div>
         </div>
       </div>
-      <div className=" bg-amber-100 col-span-10">
-        <Outlet />
+      <div className=" col-span-10  ">
+        <div className="mx-auto flex flex-col justify-evenly w-[80%]">
+          <div className="">
+            <AdminBar />
+          </div>
+          <div>
+            <Outlet />
+          </div>
+        </div>
       </div>
     </div>
   );
